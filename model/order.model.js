@@ -2,14 +2,14 @@ const DB_CONNECTION = require('../config/db.config')
 
 const Product = function(item) {
 
-    this.product_name = item.product_name;
-    this.product_description = item.product_description;
-    this.product_quantity = item.product_quantity;
-    this.product_image = item.product_image;
-    this.product_price = item.product_price;
+    this.order_number = item.order_number;
+    this.order_user_ID = item.order_user_ID;
+    this.order_product_ID = item.order_product_ID;
+    this.order_total_price = item.order_total_price;
+    this.order_status = item.order_status;
 }
 
-// Create a produc and save it in database.
+// Create a product and save it in database.
 Product.create = (newItem, result) => {
     DB_CONNECTION.query("INSERT INTO products SET ?", newItem, (err, res) => {
         if (err) {

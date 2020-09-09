@@ -1,4 +1,5 @@
 const User = require("../model/user.model");
+const DB_CONNECTION = require('../config/db.config');
 
 // Create and Save a new User.
 exports.create = (req, res) => {
@@ -7,7 +8,7 @@ exports.create = (req, res) => {
         res.status(400).send({
             message: "Content can not be empty!"
         })
-    }
+    } 
 
     // Create a User
     const user = new User({
