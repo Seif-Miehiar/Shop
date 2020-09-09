@@ -16,3 +16,12 @@ module.exports = app => {
   // Delete a product
   app.delete('/all-products/:product_ID', products.delete);
 }
+
+// {
+//   "product_name": "product test 1",
+//   "product_description": "product test 1 description changing description on update by id",
+//   "product_quantity": "20",
+//   "product_image": "https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-1.2.1&w=1000&q=80",
+//   "product_price": 50
+//   }
+  
