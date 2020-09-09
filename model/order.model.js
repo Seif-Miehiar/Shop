@@ -3,7 +3,6 @@ const DB_CONNECTION = require('../config/db.config')
 const Order = function(order) {
 
     this.user_ID = order.user_ID;
-    this.product_ID = order.product_ID;
     this.order_total_price = order.order_total_price;
     this.order_status = order.order_status;
 }
