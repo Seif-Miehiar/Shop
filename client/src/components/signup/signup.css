@@ -1,0 +1,7 @@
+.signup-container {
+  background-image: url('./img-sign-up-bkg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8
+}

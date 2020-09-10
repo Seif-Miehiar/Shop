@@ -4,6 +4,7 @@ const cookieParser = require("cookie-parser");
 const helmet = require('helmet');
 const cors = require("cors");
 const path = require('path');
+var session = require('express-session');
 require('dotenv').config()
 
 const app = express();
@@ -15,7 +16,12 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(helmet())
 // parse requests of content-type - application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(session({
+	secret: 'secret',
+	resave: true,
+	saveUninitialized: true
+}));
 
 //to parse incoming data to express server
 app.use(express.json());
